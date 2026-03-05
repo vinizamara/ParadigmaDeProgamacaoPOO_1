@@ -24,4 +24,18 @@ public class Streaming {
         this.ativo = true;
         this.ultimoFilmeAssistido = "";
     }
+
+    public void assistirFilme(String nomeFilme){
+        if (this.ativo){
+            this.ultimoFilmeAssistido = nomeFilme;
+            System.out.println("Assistindo: " + nomeFilme);
+        }
+        else{
+            System.out.println("A conta está inativa, é necessário pagar a fatura.");
+        }
+    }
+
+    public void cancelarAssinatura(){
+        this.ativo = false;
+    }
 }
