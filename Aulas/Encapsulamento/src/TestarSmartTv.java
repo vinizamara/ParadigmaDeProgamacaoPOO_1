@@ -16,5 +16,12 @@ public class TestarSmartTv {
         System.out.println(s1.getMarca());
         s1.setModelo("Teste2");
         System.out.println(s1.getModelo());
+
+        s1.setConectadaInternet(true);
+        System.out.println(s1.isConectadaInternet());
+        s1.abrirYoutube();
+
+        s2.aumentarVolume(100);
+        s2.diminuirVolume(60);
     }
 }
