@@ -38,4 +38,12 @@ public class Streaming {
     public void cancelarAssinatura(){
         this.ativo = false;
     }
+
+    public String toString() {
+        return "Usuário: " + usuario +
+                " / Plano: " + plano +
+                " / Último Filme Assistido: " + ultimoFilmeAssistido +
+                " / Mensalidade: " + mensalidade +
+                " / Ativo: " + ativo;
+    }
 }
