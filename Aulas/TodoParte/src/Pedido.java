@@ -1,9 +1,11 @@
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Pedido {
     private int id;
     private Date data;
     private Cliente cliente; // Associação Todo-Parte
+    private ArrayList<ItemPedido> itensPedido;
 
     public int getId() {
         return id;
@@ -35,6 +37,7 @@ public class Pedido {
                 "id=" + id +
                 ", data=" + data +
                 ", cliente=" + cliente +
+                ", itens do pedido=" + itensPedido +
                 '}';
     }
 
@@ -46,5 +49,18 @@ public class Pedido {
         this.id = id;
         this.data = data;
         this.cliente = cliente;
+        this.itensPedido = new ArrayList<>();
+    }
+
+    // Adiciona um item de pedido no vetor ou no pedido
+    public void adicionaItemPedido (int id, float qtde, Produto produto){
+        ItemPedido aux = new ItemPedido(id, qtde, produto);
+        this.itensPedido.add(aux);
+        System.out.println("Item do pedido adicionado com sucesso");
+    }
+
+    //Não finalizado
+    public float calculaTotalPedido(){
+        return 0;
     }
 }
