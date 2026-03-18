@@ -67,7 +67,7 @@ public class ArCondicionado {
     // Método público
     public void ativarModoTurbo() {
         if (verificarCompressor()) {
-            setTemperatura(16);
+            this.setTemperatura(16);
             System.out.println("Modo turbo ativado com sucesso.");
         } else {
             System.out.println("Falha técnica no compressor. Modo turbo não ativado.");

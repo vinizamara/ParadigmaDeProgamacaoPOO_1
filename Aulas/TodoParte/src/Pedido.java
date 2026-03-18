@@ -61,6 +61,11 @@ public class Pedido {
 
     //Não finalizado
     public float calculaTotalPedido(){
-        return 0;
+        // para cada itemPedido
+        float soma = 0;
+        for(ItemPedido ip : this.itensPedido){
+            soma += ip.getQtde() * ip.getProduto().getPreco();
+        }
+        return soma;
     }
 }

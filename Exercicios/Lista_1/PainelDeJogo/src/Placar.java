@@ -15,10 +15,10 @@ public class Placar {
             System.out.println("Tipo de ponto inválido!");
             return;
         }
-        else if (time.equals("Casa")){
+        else if (time.equalsIgnoreCase("Casa")){
             this.pontosCasa += tipo;
         }
-        else if (time.equals("Visitante")) {
+        else if (time.equalsIgnoreCase("Visitante")) {
             this.pontosVisitante += tipo;
         }
     }
