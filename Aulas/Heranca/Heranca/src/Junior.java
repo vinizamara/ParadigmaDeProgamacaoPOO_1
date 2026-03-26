@@ -9,4 +9,18 @@ public class Junior extends Desenvolvedor{
         super(nome, linguagem, salarioBase);
         this.mentor = mentor;
     }
+
+    //Utiliza-se Override para anulação de método
+    @Override
+    public void codar(){
+        System.out.println("Junior desenvolvendo mentoria de " + this.mentor);
+    }
+
+    @Override
+    public String toString(){
+        return "Junior{" +
+                super.toString() +
+                " Mentor: " + mentor +
+                "}";
+    }
 }
