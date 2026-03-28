@@ -6,6 +6,12 @@ public class Veiculo {
     public Veiculo() {
     }
 
+    public Veiculo(String marca, String modelo, float velocidade) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.velocidade = velocidade;
+    }
+
     public String getMarca() {
         return marca;
     }
