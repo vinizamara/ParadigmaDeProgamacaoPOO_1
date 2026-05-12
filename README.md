@@ -22,8 +22,13 @@ Este repositório contém aulas e exercícios desenvolvidos durante a disciplina
 
 ## 🚀 Tecnologias Utilizadas
 
-* Java
-* IntelliJ IDEA
+<p align="left">
+
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" height="35" />
+
+  <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white" height="35" />
+
+</p>
 
 ## 📌 Notas
 
