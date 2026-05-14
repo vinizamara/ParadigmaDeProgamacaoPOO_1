@@ -16,6 +16,23 @@ public class ClienteService {
         return this.clientes;
     }
 
+    public Cliente buscarPorId(Long idRequisitado){
+//        for (int i = 0; i < clientes.size(); i++){
+//            if (this.clientes.get(i).getId().equals(idRequisitado)){
+//                //Caso encontre:
+//                return this.clientes.get(i);
+//            }
+//        }
+        for (Cliente cliente : this.clientes) {
+            if (cliente.getId().equals(idRequisitado)) {
+                //Caso encontre:
+                return cliente;
+            }
+        }
+        //Caso não encontre:
+        return null;
+    }
+
     public Cliente criar(Cliente cliente){
         //settar id do cliente
         cliente.setId(id);
@@ -23,22 +40,6 @@ public class ClienteService {
         //Adicionar o cliente no "Banco de Dados"
         this.clientes.add(cliente);
         return cliente;
-    }
-
-    public Cliente buscarPorId(Long idRequisitado){
-        for (int i = 0; i < clientes.size(); i++){
-            if (this.clientes.get(i).getId().equals(idRequisitado)){
-                //Caso encontre:
-                return this.clientes.get(i);
-            }
-        }
-        //Caso não encontre:
-        return null;
-    }
-
-    public boolean remover(Long idRequisitado){
-        //Utilizando método remoIf
-        return this.clientes.removeIf(c -> c.getId().equals(idRequisitado));
     }
 
     public Cliente atualizar(Long idRequisitado, Cliente clienteNovo){
@@ -53,5 +54,10 @@ public class ClienteService {
 
         //Caso não encontre:
         return null;
+    }
+
+    public boolean remover(Long idRequisitado){
+        //Utilizando método remoIf
+        return this.clientes.removeIf(c -> c.getId().equals(idRequisitado));
     }
 }
