@@ -39,8 +39,24 @@ public class ClienteController {
         return ResponseEntity.created(uri).body(novo);
     }
 
-    @PatchMapping("/idRequisitado")
+    @PatchMapping("/{idRequisitado}")
     public ResponseEntity<Cliente> atualizar(@PathVariable Long idRequisitado, @RequestBody Cliente clienteNovo){
-        return null;
+        Cliente resposta = service.atualizar(idRequisitado, clienteNovo);
+        if (resposta != null){
+            return ResponseEntity.ok(resposta);
+        }
+        else{
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/{idRequisitado}")
+    public ResponseEntity<Void> remover(@PathVariable Long idRequisitado){
+        if(service.remover(idRequisitado)){
+            return ResponseEntity.noContent().build();
+        }
+        else{
+            return ResponseEntity.notFound().build();
+        }
     }
 }
